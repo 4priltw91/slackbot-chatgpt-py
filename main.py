@@ -26,7 +26,7 @@ def test(message, say):
 def handle_direct_message(message, say):
 
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="gpt-3.5-turbo-0613",
         messages=[{"role": "user", "content": f"{message['text']}"}]
     )
     
@@ -37,7 +37,7 @@ def handle_direct_message(message, say):
 def handle_mention(message, say):
 
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="gpt-3.5-turbo-0613",
         messages=[{"role": "user", "content": f"{message['text']}"}]
     )
     
